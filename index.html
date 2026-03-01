@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Board–JEE Game Week</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>⚡ BOARD–JEE QUEST ⚡</h1>
+    <h2>Crush Your Study Goals</h2>
+
+    <section class="status">
+      <div>
+        <div style="text-align: center; margin-bottom: 16px;">
+          <div class="hearts">
+            <span class="heart" id="heart1">❤️</span>
+            <span class="heart" id="heart2">❤️</span>
+            <span class="heart" id="heart3">❤️</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hp-container">
+        <div class="label-row">
+          <label>💪 STAMINA (HP)</label>
+          <span id="hpText">100</span>
+        </div>
+        <div class="bar-bg">
+          <div class="bar-fill" id="hpBar"></div>
+        </div>
+      </div>
+
+      <div class="xp-container">
+        <div class="label-row">
+          <label>✨ EXPERIENCE (XP)</label>
+          <span id="xpText">0 (Level 1)</span>
+        </div>
+        <div class="bar-bg">
+          <div class="bar-fill xp" id="xpBar"></div>
+        </div>
+      </div>
+
+      <div class="tokens">
+        💰 TOKENS EARNED: <span id="tokenText">0</span>
+      </div>
+    </section>
+
+    <section class="timer">
+      <h3>⏳ FOCUS BLOCK TIMER</h3>
+      <div class="timer-display" id="timerDisplay">25:00</div>
+      <div class="timer-buttons">
+        <button id="startTimerBtn">▶️ START BLOCK</button>
+        <button id="resetTimerBtn">🔄 RESET</button>
+      </div>
+      <p class="hint">Lock in for 25 minutes. Log your block type when done!</p>
+    </section>
+
+    <section class="buttons">
+      <h3>📊 LOG YOUR BLOCK</h3>
+      <div class="btn-row">
+        <button data-type="board-read">📖 NCERT READ<br><span style="font-size: 11px; opacity: 0.8;">+10 XP</span></button>
+        <button data-type="board-write">✍️ BOARD WRITE<br><span style="font-size: 11px; opacity: 0.8;">+15 XP</span></button>
+      </div>
+      <div class="btn-row">
+        <button data-type="jee">🎯 JEE BLOCK<br><span style="font-size: 11px; opacity: 0.8;">+15 XP</span></button>
+        <button data-type="analysis">🔍 ANALYSIS<br><span style="font-size: 11px; opacity: 0.8;">+20 XP</span></button>
+      </div>
+      <div class="btn-row">
+        <button data-type="distraction" class="danger">📱 DISTRACTED<br><span style="font-size: 11px; opacity: 0.8;">💔 -1 HEART</span></button>
+      </div>
+    </section>
+
+    <section class="summary">
+      <h3>🏆 END OF DAY REWARDS</h3>
+      <div class="summary-buttons">
+        <button id="endDayBtn">🎊 END DAY</button>
+        <button id="newDayBtn">🌅 NEW DAY</button>
+      </div>
+      <p id="daySummaryText"></p>
+    </section>
+
+    <section class="log">
+      <h3>📝 SESSION LOG</h3>
+      <ul id="logList"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
